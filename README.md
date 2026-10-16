@@ -69,6 +69,28 @@ Pełna lista zależności z dokładnymi wersjami jest w pliku [requirements.txt]
 
   
 
+## Instalacja automatyczna (Windows)
+
+Zamiast wykonywać ręcznie kroki opisane niżej, możesz uruchomić instalator:
+
+1. Kliknij dwukrotnie **`install.bat`** i zgódź się na uprawnienia administratora (okno UAC).
+2. Instalator sam pobierze i skonfiguruje wszystko z sekcji [Specyfikacja](#specyfikacja--wersje-oprogramowania):
+   Python 3.11, PostgreSQL 17 (z hasłem i portem z `config.py`), Build Tools for Visual Studio + Git (do skompilowania pgvector 0.8.0),
+   Ollama 0.31.2 z oboma modelami, bazę `rag_project_db` z rozszerzeniem `vector` oraz środowisko `.venv` z pakietami.
+3. Na końcu zapyta, czy uruchomić aplikację.
+
+Kolejne uruchomienia: **`start.bat`**. Sprawdza on, czy działają PostgreSQL i Ollama, i startuje aplikację.
+
+> Pierwsza instalacja pobiera ok. 15 GB (Build Tools, modele, pakiety Pythona) i może potrwać od 30 minut do godziny.
+> Instalator można uruchamiać wielokrotnie, bo pomija to, co jest już zainstalowane. Przebieg zapisuje do pliku `install.log`.
+> Wymaga programu `winget` (jest domyślnie w Windows 10/11 jako „Instalator aplikacji”).
+
+> Jeśli PostgreSQL 17 był zainstalowany wcześniej, instalator go nie ruszy. Wtedy hasło i port w `config.py` muszą pasować do Twojej instalacji (krok 2 poniżej).
+
+Jeśli wolisz zrobić wszystko ręcznie, wykonaj poniższe kroki.
+
+---
+
 ## Konfiguracja krok po kroku
 
   

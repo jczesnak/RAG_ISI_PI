@@ -81,6 +81,8 @@ PYTANIE: {question} [/INST]"""
 
 def get_all_user_files(user):
     try:
+        # PGVector tworzy tabelę langchain_pg_embedding przy inicjalizacji - na świeżej bazie jeszcze jej nie ma
+        get_vector_store()
         conn = db_utils.get_db_connection()
         cur = conn.cursor()
         cur.execute(
@@ -96,6 +98,7 @@ def get_all_user_files(user):
 
 def delete_file_from_storage(user, filename):
     try:
+        get_vector_store()
         conn = db_utils.get_db_connection()
         cur = conn.cursor()
         cur.execute(

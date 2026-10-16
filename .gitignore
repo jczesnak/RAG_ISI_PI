@@ -1,0 +1,7 @@
+# Log instalatora (install.bat)
+install.log
+
+# Środowisko Python tworzone przez instalator
+.venv/
+__pycache__/
+*.pyc
