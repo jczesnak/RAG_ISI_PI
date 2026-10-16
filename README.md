@@ -1,3 +1,4 @@
+**🇵🇱 Polski** | [🇬🇧 English](README.en.md)
 
 # Instrukcja instalacji i uruchomienia projektu RAG
 
@@ -11,9 +12,56 @@ Przed uruchomieniem musisz mieć zainstalowane trzy rzeczy:
 
 | Program                     | Do czego                                                  | Skąd pobrać                                                     |
 | :-------------------------- | :-------------------------------------------------------- | :-------------------------------------------------------------- |
-| **Python 3.10+**            | Uruchomienie aplikacji i zarządzanie skryptami            | [python.org/downloads](https://www.python.org/downloads/)       |
+| **Python 3.11**             | Uruchomienie aplikacji i zarządzanie skryptami            | [python.org/downloads](https://www.python.org/downloads/)       |
 | **PostgreSQL (z pgvector)** | Główna baza danych oraz przechowywanie wektorów           | [postgresql.org/download](https://www.postgresql.org/download/) |
 | **Ollama**                  | Lokalne uruchamianie i serwowanie modeli językowych (LLM) | [ollama.com/download](https://ollama.com/download)              |
+
+  
+
+---
+
+## Specyfikacja – wersje oprogramowania
+
+Projekt był tworzony i testowany na poniższych wersjach. Inne wersje mogą działać, ale nie były sprawdzane.
+
+### Programy
+
+| Program        | Wersja       |
+| :------------- | :----------- |
+| Python         | **3.11**     |
+| PostgreSQL     | **17**       |
+| pgvector       | **0.8.0**    |
+| Ollama         | **0.31.2**   |
+
+### Modele (Ollama)
+
+| Model                                         | Rola                                   | Rozmiar |
+| :-------------------------------------------- | :------------------------------------- | :------ |
+| `SpeakLeash/bielik-11b-v2.3-instruct:Q4_K_M`  | Model językowy (Bielik 11B v2.3, kwantyzacja Q4_K_M) | ~7 GB |
+| `nomic-embed-text` (tag `latest`)             | Model embeddingów (wektory 768-wymiarowe) | ~274 MB |
+
+### Główne biblioteki Pythona
+
+| Biblioteka                   | Wersja   |
+| :--------------------------- | :------- |
+| streamlit                    | 1.52.2   |
+| extra-streamlit-components   | 0.1.81   |
+| langchain-core               | 1.2.6    |
+| langchain-community          | 0.4.1    |
+| langchain-classic            | 1.0.1    |
+| langchain-text-splitters     | 1.1.0    |
+| langchain-ollama             | 1.0.1    |
+| langchain-postgres           | 0.0.16   |
+| ollama                       | 0.6.1    |
+| pgvector                     | 0.3.6    |
+| SQLAlchemy                   | 2.0.45   |
+| psycopg2                     | 2.9.11   |
+| psycopg / psycopg-binary     | 3.3.2    |
+| pypdf                        | 6.5.0    |
+| bcrypt                       | 5.0.0    |
+| python-dotenv                | 1.2.1    |
+
+Pełna lista zależności z dokładnymi wersjami jest w pliku [requirements.txt](requirements.txt).
 
   
 
